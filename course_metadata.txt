@@ -1,0 +1,6 @@
+course_proj = 2024-test-coreR
+course_org = nceas-learning-hub
+title = New coreR Book with awesome package
+description = New coreR Book with awesome package
+start_date = Oct 21
+end_date = Oct 25
