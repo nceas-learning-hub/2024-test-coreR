@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>New coreR Book with awesome package - 4&nbsp; wrap: sentence</title>
+<title>New coreR Book with awesome package - 4&nbsp; editor: source</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">wrap: sentence</span></h1>
+      <h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">editor: source</span></h1>
                       </div>
   </div>
     
@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
-<p>title: Tidy Data editor: markdown:</p>
+<p>title: Tidy Data format: html</p>
 <section id="learning-objectives" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <p>Learn how to design and create effective data tables by:</p>
@@ -329,10 +329,10 @@ Tidy Data: A way of life
 <section id="assessing-tidy-data-principles" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="assessing-tidy-data-principles"><span class="header-section-number">4.3</span> Assessing Tidy Data Principles</h2>
 <p>The following is an example of tidy data - it’s easy to see the three tidy data principles apply.</p>
-<p><img src="images/lecture_tidy_datatidy_data.png" class="img-fluid"></p>
-<p><img src="images/lecture_tidy_datatidy_variables.png" class="img-fluid"></p>
-<p><img src="images/lecture_tidy_datatidy_observations.png" class="img-fluid"></p>
-<p><img src="images/lecture_tidy_datatidy_values.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/tidy_data.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/tidy_variables.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/tidy_observations.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/tidy_values.png" class="img-fluid"></p>
 </section>
 <section id="recognizing-untidy-data" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="recognizing-untidy-data"><span class="header-section-number">4.4</span> Recognizing untidy data</h2>
@@ -341,27 +341,27 @@ Tidy Data: A way of life
 <section id="example-1" class="level3" data-number="4.4.1">
 <h3 data-number="4.4.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">4.4.1</span> Example 1</h3>
 <p>The following is a screenshot of an actual dataset that came across NCEAS. We have all seen spreadsheets that look like this - and it is fairly obvious that whatever this is, it isn’t very tidy. Let’s dive deeper into why we consider it untidy data.</p>
-<p><img src="images/lecture_tidy_dataexcel-org-01.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/excel-org-01.png" class="img-fluid"></p>
 <section id="multiple-tables" class="level4" data-number="4.4.1.1">
 <h4 data-number="4.4.1.1" class="anchored" data-anchor-id="multiple-tables"><span class="header-section-number">4.4.1.1</span> Multiple tables</h4>
 <p>To begin with, notice there are actually three smaller tables within this table. Although for our human brain it is easy to see and interpret this, it is extremely difficult to get a computer to see it this way.</p>
-<p><img src="images/lecture_tidy_dataexcel-org-02.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/excel-org-02.png" class="img-fluid"></p>
 <p>Having multiple tables within the same table will create headaches down the road should you try to read in this information using R or another programming language. <strong>Having multiple tables immediately breaks the tidy data principles</strong>, as we will see next.</p>
 </section>
 <section id="inconsistent-columns" class="level4" data-number="4.4.1.2">
 <h4 data-number="4.4.1.2" class="anchored" data-anchor-id="inconsistent-columns"><span class="header-section-number">4.4.1.2</span> Inconsistent columns</h4>
 <p>In tidy data, <strong>each column corresponds to a single variable</strong>. If you look down a column, and see that multiple variables exist in the table, the data is not tidy. A good test for this can be to see if you think the column consists of only one unit type.</p>
-<p><img src="images/lecture_tidy_dataexcel-org-04.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/excel-org-04.png" class="img-fluid"></p>
 </section>
 <section id="inconsistent-rows" class="level4" data-number="4.4.1.3">
 <h4 data-number="4.4.1.3" class="anchored" data-anchor-id="inconsistent-rows"><span class="header-section-number">4.4.1.3</span> Inconsistent rows</h4>
 <p>The second principle of tidy data is: <strong>every column must be a single observation</strong>. If you look across a single row, and you notice that there are clearly multiple observations in one row, the data are likely not tidy.</p>
-<p><img src="images/lecture_tidy_dataexcel-org-03.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/excel-org-03.png" class="img-fluid"></p>
 </section>
 <section id="marginal-sums-and-statistics" class="level4" data-number="4.4.1.4">
 <h4 data-number="4.4.1.4" class="anchored" data-anchor-id="marginal-sums-and-statistics"><span class="header-section-number">4.4.1.4</span> Marginal sums and statistics</h4>
 <p><strong>Marginal sums and statistics are not considered tidy</strong>. They break principle one, “Every column is a variable”, because a marginal statistic does not represent the same variable as the values it is summarizing. They also break principle two, “Every row is an observation”, because they represent a combination of observations, rather than a single one.</p>
-<p><img src="images/lecture_tidy_dataexcel-org-05.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/excel-org-05.png" class="img-fluid"></p>
 </section>
 </section>
 <section id="example-2" class="level3" data-number="4.4.2">
@@ -376,14 +376,14 @@ Tidy Data: A way of life
 <li><em>sp1height</em>, <em>sp2height</em>: height of the plants observed</li>
 </ul>
 <p>Take a moment to see why this is not tidy data.</p>
-<p><img src="images/lecture_tidy_datauntidy_1.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/untidy_1.png" class="img-fluid"></p>
 <section id="multiple-observations" class="level4" data-number="4.4.2.1">
 <h4 data-number="4.4.2.1" class="anchored" data-anchor-id="multiple-observations"><span class="header-section-number">4.4.2.1</span> Multiple Observations</h4>
 <p>Remember that an observation is all the values measured for an individual <strong>entity</strong>.</p>
 <p>If our entity is a single observed plant, then the values we measured are date and site of observation, the altitude, and the species code and height. This table breaks the second tidy data principles: Every row is an observation.</p>
-<p><img src="images/lecture_tidy_datauntidy_2.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/untidy_2.png" class="img-fluid"></p>
 <p>People often refer to this as “<em>wide</em> format”, because the observations are spread across a wide number of columns. Note that, should one encounter a new species in the survey, we would have to add new columns to the table. This is difficult to analyze, understand, and maintain. To solve this problem, we can create a single column for species code and a single column for species height as in the following table.</p>
-<p><img src="images/lecture_tidy_datatidy_not_normal.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/tidy_not_normal.png" class="img-fluid"></p>
 </section>
 </section>
 </section>
@@ -415,13 +415,13 @@ Tidy Data: A way of life
 <section id="example" class="level3" data-number="4.6.2">
 <h3 data-number="4.6.2" class="anchored" data-anchor-id="example"><span class="header-section-number">4.6.2</span> Example</h3>
 <p>In the previous data table the row values for the last three columns are repeated.</p>
-<p><img src="images/lecture_tidy_datadenormalized.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/denormalized.png" class="img-fluid"></p>
 <p>This means the data is denormalized and it happens because each row has values about more than one entity:</p>
 <ul>
 <li>1st entity: individual plants found at that site, and</li>
 <li>2nd entity: sites at which the plants were observed.</li>
 </ul>
-<p><img src="images/lecture_tidy_datatwo_entities.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/two_entities.png" class="img-fluid"></p>
 <p>If we use this information to normalize our data, we should end up with:</p>
 <ul>
 <li>one tidy table for each entity observed, and</li>
@@ -430,7 +430,7 @@ Tidy Data: A way of life
 <p>Here’s how our normalized data would look like:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_datanormalized.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+<p><img src="images/lecture_tidy_data/normalized.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <p>Notice that each table also satisfies the tidy data principles.</p>
@@ -473,7 +473,7 @@ Tidy Data: A way of life
 <p>The ‘site’ column is the <em>primary key</em> of that table because it uniquely identifies each row of the table as a unique observation of a site. In the first table, however, the ‘site’ column is a <em>foreign key</em> that references the primary key from the second table. This linkage tells us that the first height measurement for the DAPU observation occurred at the site with the name Taku.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_dataprimary_foreign_keys.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+<p><img src="images/lecture_tidy_data/primary_foreign_keys.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
@@ -488,14 +488,14 @@ In the sites data table from the previous example, we noticed that ‘site’ an
 
 A surrogate key is often simpler, and can be a better choice than a natural key to become the primary key of a data table.
 
-![](images/lecture_tidy_datasurrogate_natural_keys.png){fig-align="center" width=70%} -->
+![](images/lecture_tidy_data/surrogate_natural_keys.png){fig-align="center" width=70%} -->
 <!--Finally,-->
 <p>It can also be the case that a variable is not a key, but by combining it with a second variable we get that the combined values uniquely identify the rows. This is called a</p>
 <ul>
 <li><strong>Compound Key</strong>: a key that is made up of more than one variable.</li>
 </ul>
 <p>For example, the ‘site’ and ‘sp_code’ columns in the plants table cannot be keys on their own, since each has repeated values. However, when we look at their combined values (1-DAPU, 1-DAMA, 2-DAMA, 2-DAPU) we see each row has a unique value. So ‘site’ and ‘sp_code’ together form a compound key.</p>
-<p><img src="images/lecture_tidy_datacompound_key.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/compound_key.png" class="img-fluid"></p>
 <p>There are also other types of keys, like a natural key or a surrogate key. Each type of key has advantages and disadvantages. You can read more about this in <a href="https://www.databasestar.com/database-keys/" target="_blank"> this article</a>.</p>
 </section>
 </section>
@@ -503,30 +503,30 @@ A surrogate key is often simpler, and can be a better choice than a natural key 
 <h2 data-number="4.8" class="anchored" data-anchor-id="joins"><span class="header-section-number">4.8</span> Joins</h2>
 <p>Frequently, analysis of data will require merging these separately managed tables back together. There are multiple ways to join the observations in two tables, based on how the rows of one table are merged with the rows of the other. Regardless of the join we will perform, we need to start by identifying the primary key in each table and how these appear as foreign keys in other tables.</p>
 <p>When conceptualizing merges, one can think of two tables, one on the <em>left</em> and one on the <em>right</em>.</p>
-<p><img src="images/lecture_tidy_datajoin-diagrams-separate.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/join-diagrams-separate.png" class="img-fluid"></p>
 <section id="inner-join" class="level3" data-number="4.8.1">
 <h3 data-number="4.8.1" class="anchored" data-anchor-id="inner-join"><span class="header-section-number">4.8.1</span> Inner Join</h3>
 <p>An <em>INNER JOIN</em> is when you merge the subset of rows that have matches in both the left table and the right table.</p>
-<p><img src="images/lecture_tidy_datajoin-diagrams-inner.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/join-diagrams-inner.png" class="img-fluid"></p>
 </section>
 <section id="left-join" class="level3" data-number="4.8.2">
 <h3 data-number="4.8.2" class="anchored" data-anchor-id="left-join"><span class="header-section-number">4.8.2</span> Left Join</h3>
 <p>A <em>LEFT JOIN</em> takes all of the rows from the left table, and merges on the data from matching rows in the right table. Keys that don’t match from the left table are still provided with a missing value (na) from the right table.</p>
-<p><img src="images/lecture_tidy_datajoin-diagrams-left.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/join-diagrams-left.png" class="img-fluid"></p>
 </section>
 <section id="right-join" class="level3" data-number="4.8.3">
 <h3 data-number="4.8.3" class="anchored" data-anchor-id="right-join"><span class="header-section-number">4.8.3</span> Right Join</h3>
 <p>A <em>RIGHT JOIN</em> is the same as a left join, except that all of the rows from the right table are included with matching data from the left, or a missing value. Notice that left and right joins can ultimately be the same depending on the positions of the tables</p>
-<p><img src="images/lecture_tidy_datajoin-diagrams-right.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/join-diagrams-right.png" class="img-fluid"></p>
 </section>
 <section id="full-outer-join" class="level3" data-number="4.8.4">
 <h3 data-number="4.8.4" class="anchored" data-anchor-id="full-outer-join"><span class="header-section-number">4.8.4</span> Full Outer Join</h3>
 <p>Finally, a <em>FULL OUTER JOIN</em> includes all data from all rows in both tables, and includes missing values wherever necessary.</p>
-<p><img src="images/lecture_tidy_datajoin-diagrams-full.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/join-diagrams-full.png" class="img-fluid"></p>
 <p>Sometimes people represent joins as Venn diagrams, showing which parts of the left and right tables are included in the results for each join. This representation is useful, however, they miss part of the story related to where the missing value comes from in each result.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_datajoin-venn.png" class="img-fluid figure-img"></p>
+<p><img src="images/lecture_tidy_data/join-venn.png" class="img-fluid figure-img"></p>
 <figcaption>Image source: R for Data Science, Wickham &amp; Grolemund.</figcaption>
 </figure>
 </div>
@@ -539,7 +539,7 @@ A surrogate key is often simpler, and can be a better choice than a natural key 
 <p><em>Step 1: Identify the entities in the relational database and add each one in a box.</em> In our case, entities are [plants] and [sites], since we are gathering observations about both of these.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_dataER_diagram_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+<p><img src="images/lecture_tidy_data/ER_diagram_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p><em>Step 2: Add variables for each entity and identify keys.</em> Add the variables as a list inside each box. Then, identify the primary and foreign keys in each of the boxes. To visualize this, we have indicated</p>
@@ -549,7 +549,7 @@ A surrogate key is often simpler, and can be a better choice than a natural key 
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_dataER_diagram_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+<p><img src="images/lecture_tidy_data/ER_diagram_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p><em>Step 3: Add relationships between entities.</em></p>
@@ -560,26 +560,26 @@ A surrogate key is often simpler, and can be a better choice than a natural key 
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_dataER_diagram_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+<p><img src="images/lecture_tidy_data/ER_diagram_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p><em>Step 4: Add cardinality to every relationship in the diagram.</em> At this step we want to quantify how many items in an entity are related to another entity. This is easiest if we reuse the description we found in the previous step. For example, “a plant is located in one site”. Then we add the symbol for “one” at the end of the line going from [plants] to [sites].</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_dataER_diagram_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+<p><img src="images/lecture_tidy_data/ER_diagram_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p>To finish, we also indicate how many plants are related to a single site. Since “a site has many plants”, we add the symbol for “many” at the end of the line going from [sites] to [plants]</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lecture_tidy_dataER_diagram_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+<p><img src="images/lecture_tidy_data/ER_diagram_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p>That’s it!</p>
 <section id="edr-crows-foot" class="level4" data-number="4.8.5.1">
 <h4 data-number="4.8.5.1" class="anchored" data-anchor-id="edr-crows-foot"><span class="header-section-number">4.8.5.1</span> EDR Crow’s Foot</h4>
 <p>The symbols we used at the end of the lines are called <strong>ERD “crow’s foot”</strong>. You can see all the existing ones together with an example in the next diagram.</p>
-<p><img src="images/lecture_tidy_dataERD_Relationship_Symbols_Quick_Reference.png" class="img-fluid"></p>
+<p><img src="images/lecture_tidy_data/ERD_Relationship_Symbols_Quick_Reference.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

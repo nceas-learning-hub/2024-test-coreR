@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: _book
+  output-dir: docs
 
 book:
   title: "New coreR Book with awesome package"
@@ -27,14 +27,14 @@ book:
 
   chapters:
     - index.qmd # preface
-    - session_01.qmd  ### activity: reproducibility lego   (coreRlessons v0.1.0)
-    - session_02.qmd  ### github: collaboration   (coreRlessons v0.1.0)
-    - session_03.qmd  ### github: introduction   (coreRlessons v0.1.0)
-    - session_04.qmd  ### lecture: tidy data   (coreRlessons v0.1.0)
-    - session_05.qmd  ### r: functions   (coreRlessons v0.1.0)
-    - session_06.qmd  ### r: packages   (coreRlessons v0.1.0)
-    - session_07.qmd  ### r: practice tidy data joins   (coreRlessons v0.1.0)
-    - session_08.qmd  ### r: programming introduction   (coreRlessons v0.1.0)
+    - s01_activity_reproducibility_lego.qmd  ###  (coreRlessons v0.1.0)
+    - s02_github_collaboration.qmd  ###  (coreRlessons v0.1.0)
+    - s03_github_introduction.qmd  ###  (coreRlessons v0.1.0)
+    - s04_lecture_tidy_data.qmd  ###  (coreRlessons v0.1.0)
+    - s05_r_functions.qmd  ###  (coreRlessons v0.1.0)
+    - s06_r_packages.qmd  ###  (coreRlessons v0.1.0)
+    - s07_r_practice_tidy_data_joins.qmd  ###  (coreRlessons v0.1.0)
+    - s08_r_programming_introduction.qmd  ###  (coreRlessons v0.1.0)
 
 
 
@@ -48,4 +48,4 @@ format:
   # pdf:
   #   documentclass: scrreprt
 
-editor: visual
+editor: source
