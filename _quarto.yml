@@ -1,44 +1,41 @@
 project:
-  type: book
+  type: website
+  render:
+    - "*.qmd"
   output-dir: docs
 
-book:
+website:
   title: "New coreR Book with awesome package"
-  subtitle: "Oct 21 - Oct 25"
-  reader-mode: false
-
-  # NoteHD: cover image is not working
-  # cover-image: cover.png
-  # cover-image-alt: "Learning Hub logo in the shape of a hexagon with a bee in the center"
+  # subtitle: "Oct 21 - Oct 25" (only for book)
+  # reader-mode: false
 
   favicon: cover.png # learning hub logo
 
-  sidebar:
-    title: "Training Materials"
+sidebar:
+  - title: "Training Materials"
     style: "floating"
     search: true
     tools:
       - icon: house-door-fill
-        href: https://www.nceas.ucsb.edu/learning-hub
+          href: https://www.nceas.ucsb.edu/learning-hub
       - icon: twitter
-        href: https://twitter.com/ucsb_nceas
+          href: https://twitter.com/ucsb_nceas
       - icon: github
-        href: https://github.com/nceas-learning-hub/2024-test-coreR
+          href: https://github.com/nceas-learning-hub/2024-test-coreR
 
-  chapters:
-    - index.qmd # preface
-    - s01_activity_reproducibility_lego.qmd  ###  (coreRlessons v0.1.0)
-    - s02_github_collaboration.qmd  ###  (coreRlessons v0.1.0)
-    - s03_github_introduction.qmd  ###  (coreRlessons v0.1.0)
-    - s04_lecture_tidy_data.qmd  ###  (coreRlessons v0.1.0)
-    - s05_r_functions.qmd  ###  (coreRlessons v0.1.0)
-    - s06_r_packages.qmd  ###  (coreRlessons v0.1.0)
-    - s07_r_practice_tidy_data_joins.qmd  ###  (coreRlessons v0.1.0)
-    - s08_r_programming_introduction.qmd  ###  (coreRlessons v0.1.0)
+    contents:
+      - text: "Reprodicibility Activity"
+        href: materials/s01_activity_reproducibility_lego.qmd  ###  (coreRlessons v0.1.0)
+      - text: "Collaborating with GitHub"
+        href: materials/s02_github_collaboration.qmd  ###  (coreRlessons v0.1.0)
+      - text: "Intro to GitHub"
+        href: materials/s03_github_introduction.qmd  ###  (coreRlessons v0.1.0)
 
+    # - s09_lesson_with_slides.qmd ### test lesson
 
 
-bibliography: book.bib
+
+# bibliography: book.bib
 
 format:
   html:
@@ -48,4 +45,3 @@ format:
   # pdf:
   #   documentclass: scrreprt
 
-editor: source
